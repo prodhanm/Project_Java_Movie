@@ -2,12 +2,10 @@ package movie_info;
 
 class MovieRating implements Rating {
 
-    //private int totalRating;
     private int sumRatings;
     private int count;
 
     public MovieRating() {
-        //this.totalRating = 0;
         this.sumRatings = 0;
         this.count = 1;
     }
