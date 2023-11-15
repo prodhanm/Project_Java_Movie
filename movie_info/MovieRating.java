@@ -2,14 +2,14 @@ package movie_info;
 
 class MovieRating implements Rating {
 
-    private int totalRating;
+    //private int totalRating;
     private int sumRatings;
     private int count;
 
     public MovieRating() {
-        this.totalRating = 0;
+        //this.totalRating = 0;
         this.sumRatings = 0;
-        this.count = 0;
+        this.count = 1;
     }
 
     @Override
@@ -23,15 +23,15 @@ class MovieRating implements Rating {
     
     @Override
     public double getAverageRating(double avg) {
-        if (this.totalRating >= 0) {
-            avg = this.sumRatings / this.totalRating;
+        if (this.sumRatings >= 0) {
+            avg = this.sumRatings / this.count;
         }
         return avg;
     }
 
     @Override
     public void countRating(int count) {
-        this.count++;
+        count++;
     }
 
 }
