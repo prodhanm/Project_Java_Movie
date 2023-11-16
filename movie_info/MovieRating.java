@@ -30,11 +30,12 @@ public class MovieRating {
     public void addRating(float rating) {
         count = 0;
         this.rating += rating;
-        this.count++;
+        count++;
     }
 
     public float getAverageRating() {
-        avgRating = this.rating / count;
+        avgRating = rating / count++;
+        return avgRating;
     }
 
 }
